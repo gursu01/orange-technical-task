@@ -23,7 +23,7 @@ public class CashAmmountAdjustRequestDto {
     private String currencyCode;
     @NotNull
     @Min(value = 0, message = "Amount must be greater than or equal to zero")
-    private BigDecimal ammount;
+    private BigDecimal amount;
     @NotNull
     private LocalDate date;
 }
