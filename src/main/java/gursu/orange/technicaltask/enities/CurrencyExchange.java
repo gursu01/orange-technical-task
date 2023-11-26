@@ -29,16 +29,16 @@ public class CurrencyExchange extends AbstractEntity {
     @Column("value_exchanged")
     private String targetCurrencyCode;
 
-    @Column("received_ammount")
+    @Column("received_amount")
     private BigDecimal receivedAmount;
 
-    @Column("released_ammount")
+    @Column("released_amount")
     private BigDecimal releasedAmount;
 
     @Column("operator_id")
     private Long operatorId;
 
-    @Column("rate_id")
+    @Column("exchange_rate_id")
     private Long exchangeRateId;
 }
 

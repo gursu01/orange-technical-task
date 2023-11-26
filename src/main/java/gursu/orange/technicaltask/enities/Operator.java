@@ -15,8 +15,8 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Table("operators")
-@ToString(exclude = {"currencyExchange", "foreignExchangeOffice"})
-@EqualsAndHashCode(exclude = {"currencyExchange", "foreignExchangeOffice"})
+@ToString
+@EqualsAndHashCode
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Operator extends AbstractEntity{
@@ -29,10 +29,8 @@ public class Operator extends AbstractEntity{
     @Column("last_name")
     private String lastName;
 
-    @Column("operator")
-    private CurrencyExchange currencyExchange;
-
+    @NotNull
     @Column("foreign_exchange_office_id")
-    private ForeignExchangeOffice foreignExchangeOffice;
+    private Long foreignExchangeOfficeId;
 }
 

@@ -30,5 +30,5 @@ public class OperatorReport extends AbstractEntity{
     private String currencyCode;
 
     @Column("operator_id")
-    private Operator operator;
+    private Long operatorID;
 }

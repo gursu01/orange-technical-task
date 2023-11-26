@@ -29,8 +29,8 @@ public class Cash extends AbstractEntity {
     private String currencyCode;
 
     @NotNull
-    @Column("ammount")
-    private BigDecimal ammount;
+    @Column("amount")
+    private BigDecimal amount;
 
     @Column("operator_id")
     private Long operatorId;

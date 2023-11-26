@@ -15,18 +15,12 @@ import java.util.List;
 @Getter
 @Setter
 @Table("foreign_exchange_office")
-@ToString(exclude = {"operators", "cash"})
-@EqualsAndHashCode(exclude = {"operators", "cash"})
+@ToString
+@EqualsAndHashCode
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ForeignExchangeOffice extends AbstractEntity{
 
     @Column("office_name")
     private String officeName;
-
-    @Column("foreignExchangeOffice")
-    private List<Operator> operators;
-
-    @Column("foreignExchangeOffice")
-    private List<Cash> cash;
 }

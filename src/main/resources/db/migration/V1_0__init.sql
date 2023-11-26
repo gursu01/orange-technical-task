@@ -16,7 +16,7 @@ CREATE TABLE cash (
                       gen_date TIMESTAMP NOT NULL,
                       mod_date TIMESTAMP NOT NULL,
                       version INT NOT NULL,
-                      ammount NUMERIC(12, 3) NOT NULL,
+                      amount NUMERIC(12, 3) NOT NULL,
                       currency_code VARCHAR(255) NOT NULL,
                       foreign_exchange_office_id BIGINT,
                       operator_id BIGINT,
@@ -43,11 +43,11 @@ CREATE TABLE currency_exchange (
                                    gen_date TIMESTAMP NOT NULL,
                                    mod_date TIMESTAMP NOT NULL,
                                    version INT NOT NULL,
-                                   received_ammount NUMERIC(12, 3) NOT NULL,
-                                   released_ammount NUMERIC(12, 3) NOT NULL,
+                                   received_amount NUMERIC(12, 3) NOT NULL,
+                                   released_amount NUMERIC(12, 3) NOT NULL,
                                    source_currency_code VARCHAR(255),
                                    target_currency_code VARCHAR(255),
-                                   rate_id BIGINT NOT NULL,
+                                   exchange_rate_id BIGINT NOT NULL,
                                    operator_id BIGINT NOT NULL,
                                    PRIMARY KEY (pk)
 );
