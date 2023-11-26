@@ -3,6 +3,7 @@ plugins {
     id 'org.springframework.boot' version '2.6.2'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id("org.flywaydb.flyway") version "6.5.0"
+    id 'application'
 }
 
 group = 'gursu.orange'
@@ -48,3 +49,5 @@ flyway {
     user = "postgres"
     password = "aozhnl"
 }
+
+mainClassName = 'gursu.orange.technicaltask.OrangeTechnicalTaskApplication'

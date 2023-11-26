@@ -2,13 +2,13 @@
 CREATE SCHEMA IF NOT EXISTS exchange;
 
 -- Create sequence for generic ID generation
-CREATE SEQUENCE cash_seq START 1 INCREMENT 1;
-CREATE SEQUENCE currency_dictionaries_seq START 1 INCREMENT 1;
-CREATE SEQUENCE currency_exchange_seq START 1 INCREMENT 1;
-CREATE SEQUENCE exchange_rates_seq START 1 INCREMENT 1;
-CREATE SEQUENCE foreign_exchange_office_seq START 1 INCREMENT 1;
-CREATE SEQUENCE operator_report_seq START 1 INCREMENT 1;
-CREATE SEQUENCE operators_seq START 1 INCREMENT 1;
+CREATE SEQUENCE cash_seq START 100 INCREMENT 1;
+CREATE SEQUENCE currency_dictionaries_seq START 100 INCREMENT 1;
+CREATE SEQUENCE currency_exchange_seq START 100 INCREMENT 1;
+CREATE SEQUENCE exchange_rates_seq START 100 INCREMENT 1;
+CREATE SEQUENCE foreign_exchange_office_seq START 100 INCREMENT 1;
+CREATE SEQUENCE operator_report_seq START 100 INCREMENT 1;
+CREATE SEQUENCE operators_seq START 100 INCREMENT 1;
 
 -- Create table for cash
 CREATE TABLE cash (
@@ -115,7 +115,7 @@ ALTER TABLE cash
 -- Add foreign key constraint for rate_id in currency_exchange
 ALTER TABLE currency_exchange
     ADD CONSTRAINT FK_currency_exchange_rate_id
-        FOREIGN KEY (rate_id)
+        FOREIGN KEY (exchange_rate_id)
             REFERENCES exchange_rates;
 
 -- Add foreign key constraint for operator_id in currency_exchange

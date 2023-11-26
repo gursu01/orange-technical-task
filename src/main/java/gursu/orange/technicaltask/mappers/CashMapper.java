@@ -11,7 +11,7 @@ public class CashMapper {
     public static Cash toEntity(CashAmmountAdjustRequestDto requestDto) {
         return Cash.builder()
                 .currencyCode(requestDto.getCurrencyCode())
-                .ammount(requestDto.getAmmount().setScale(2, RoundingMode.HALF_EVEN))
+                .amount(requestDto.getAmmount().setScale(2, RoundingMode.HALF_EVEN))
                 .genDate(Instant.now())
                 .modDate(Instant.now())
                 .build();

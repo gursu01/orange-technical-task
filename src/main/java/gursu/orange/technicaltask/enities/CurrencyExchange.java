@@ -26,7 +26,7 @@ public class CurrencyExchange extends AbstractEntity {
     @Column("source_currency_code")
     private String sourceCurrencyCode;
 
-    @Column("value_exchanged")
+    @Column("target_currency_code")
     private String targetCurrencyCode;
 
     @Column("received_amount")

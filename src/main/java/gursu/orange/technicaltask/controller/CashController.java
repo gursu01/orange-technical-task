@@ -21,7 +21,7 @@ public class CashController {
     private final CashService cashService;
 
     @PutMapping
-    public Mono<ResponseEntity<Void>> adjustCashAmmount(@Validated @RequestBody CashAmmountAdjustRequestDto requestDto) {
+    public Mono<ResponseEntity<Void>> adjustCashAmount(@Validated @RequestBody CashAmmountAdjustRequestDto requestDto) {
         return cashService.adjustCashAmmount(requestDto)
                 .then(Mono.fromCallable(() -> ResponseEntity.status(HttpStatus.OK).build()));
     }
